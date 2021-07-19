@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "894e60a8-a1b5-41fd-8b6a-7b107e6fd1a8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 512,
+  "height": 512,
+  "platformSettings": {},
+  "subMetas": {
+    "cthulhu": {
+      "ver": "1.0.4",
+      "uuid": "94f77ed2-bf16-4378-945a-2b1ab1d252e2",
+      "rawTextureUuid": "894e60a8-a1b5-41fd-8b6a-7b107e6fd1a8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 3,
+      "trimY": 0,
+      "width": 506,
+      "height": 512,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
