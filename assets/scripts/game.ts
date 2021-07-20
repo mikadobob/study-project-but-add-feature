@@ -128,8 +128,6 @@ export class Game extends cc.Component {
         // this.schedule(this.checkGameOver, 0, cc.macro.REPEAT_FOREVER, 0);
     }
 
-    private count: number = 0;
-
     update(dt) {
         if (NamespaceData.countAliveMonster() < 20) this.spawnMonster();
         this.updateScore();
