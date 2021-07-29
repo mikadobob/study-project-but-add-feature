@@ -3,7 +3,8 @@
     "monster",
     "jet-bullet",
     "monster-bullet",
-    "jet"
+    "jet",
+    "support"
   ],
   "collision-matrix": [
     [
@@ -23,6 +24,14 @@
       true
     ],
     [
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
       false,
       false,
       true,

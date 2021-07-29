@@ -9,18 +9,21 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class NewClass extends cc.Component {
-  loadSceneGameAndTouchEvent() {
-    cc.director.preloadScene("game");
-    this.node.on(
-      cc.Node.EventType.TOUCH_START,
-      function (event) {
-        cc.director.loadScene("game");
-      },
-      this
-    );
+  onCollisionEnter(otherCollider, selfCollider) {
+    this.node.destroy();
   }
 
-  onLoad() {
-    this.loadSceneGameAndTouchEvent();
+  moveBullet() {
+    let tween = cc
+      .tween(this.node)
+      .to(2, { position: cc.v3(this.node.x, this.node.y + 1500) })
+      .call(() => {
+        this.node.destroy();
+      })
+      .start();
+  }
+
+  start() {
+    this.moveBullet();
   }
 }

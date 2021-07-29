@@ -6,21 +6,25 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const { ccclass, property } = cc._decorator;
+import { NamespaceDataManager } from "./namespace-data";
 
 @ccclass
 export default class NewClass extends cc.Component {
-  loadSceneGameAndTouchEvent() {
-    cc.director.preloadScene("game");
-    this.node.on(
-      cc.Node.EventType.TOUCH_START,
-      function (event) {
-        cc.director.loadScene("game");
-      },
-      this
-    );
+  onCollisionEnter(otherCollider, selfCollider) {
+    this.node.destroy();
   }
 
-  onLoad() {
-    this.loadSceneGameAndTouchEvent();
+  moveBullet() {
+    let tween = cc
+      .tween(this.node)
+      .to(2, { position: cc.v3(this.node.x - 800, this.node.y) })
+      .call(() => {
+        this.node.destroy();
+      })
+      .start();
+  }
+
+  start() {
+    this.moveBullet();
   }
 }
